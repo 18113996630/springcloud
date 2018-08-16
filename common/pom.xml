@@ -25,10 +25,31 @@
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
 		<swagger.version>2.5.0</swagger.version>
         <feign.version>1.3.2.RELEASE</feign.version>
+        <lcn.last.version>4.1.0</lcn.last.version>
 	</properties>
 
 	<dependencies>
-		<!-- 为了监控数据库 -->
+		<!-- json -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.46</version>
+		</dependency>
+        <!-- rabbit mq -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
+        <!-- redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- 事务控制 -->
+
+
+        <!-- 为了监控数据库 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>

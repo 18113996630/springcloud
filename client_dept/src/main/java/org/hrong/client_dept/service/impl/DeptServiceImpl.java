@@ -25,7 +25,6 @@ public class DeptServiceImpl implements IDeptService {
 	@Override
 	public Dept udpateDept(Dept data){
 		Dept res = deptRepository.saveAndFlush(data);
-			int i = 2 / 0;
 		return  res;
 	}
 

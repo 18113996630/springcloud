@@ -14,14 +14,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-	@Value(value = "swagger.basePackage")
-	private String basePackage;
+
 	@Bean
 	public Docket createRestApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage(basePackage))
+				.apis(RequestHandlerSelectors.basePackage("org.hrong.client_dept.controller"))
 				.paths(PathSelectors.any())
 				.build();
 	}

@@ -8,6 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -22,8 +23,7 @@ public class Dept implements Serializable {
 
 	@Id
 	@Column(name = "id")
-	@GeneratedValue(generator = "id")
-	@GenericGenerator(name = "id",strategy = "identity")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(name = "deptName",length = 20)
 	private String deptName;

@@ -14,7 +14,7 @@ public class EmployeeServiceImpl implements IEmployeeSerivce {
 
 	@Override
 	public Employee saveEmployee(Employee employee) {
-		Employee res = employeeDao.save(employee);
-		return res;
+		Employee result = employeeDao.save(employee);
+		return result;
 	}
 }
